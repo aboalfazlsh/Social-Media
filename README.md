@@ -24,15 +24,16 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-5- Create tables
+5- spin off docker compose
+```
+docker compose -f docker-compose.dev.yml up -d
+```
+
+6- Create tables
 ```
 python manage.py migrate
 ```
 
-6- spin off docker compose
-```
-docker compose -f docker-compose.dev.yml up -d
-```
 
 7- run the project
 ```
